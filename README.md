@@ -22,13 +22,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-$ php composer.phar require andydodot/yii2-dodotgii "dev-master"
+$ php composer.phar require inlislite/yii2-inlislitegii "dev-master"
 ```
 
 or add
 
 ```
-"andydodot/yii2-dodotgii": "dev-master"
+"inlislite/yii2-inlislitegii": "dev-master"
 ```
 
 to the ```require``` section of your `composer.json` file.
@@ -55,19 +55,6 @@ For more information about kartik-v extension, please visit [kartik-v at Github]
 
 The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
 
-Either run
-
-```
-$ php composer.phar require warrence/yii2-kartikgii "dev-master"
-```
-
-or add
-
-```
-"warrence/yii2-kartikgii": "dev-master"
-```
-
-to the ```require``` section of your `composer.json` file.
 
 ## Usage
 
@@ -79,12 +66,7 @@ $config['modules']['gii'] = 'yii\gii\Module';
 $config['modules']['gii']['class'] = 'yii\gii\Module';
 ```
 
-```php
-//Add this into backend/config/main-local.php
-$config['modules']['gii']['generators'] = [
-        'kartikgii-crud' => ['class' => 'warrence\kartikgii\crud\Generator'],
-    ];
-```
+
 
 ```php
 //Add 'gridview' into your 'modules' section in backend/config/main.php
