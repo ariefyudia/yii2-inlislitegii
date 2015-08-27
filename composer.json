@@ -29,5 +29,8 @@
         "kartik-v/yii2-builder": "*",
         "kartik-v/yii2-detail-view": "*",
         "php": ">=5.3.0"
+    },
+	"extra": {
+        "bootstrap": "inlislite\\gii\\Bootstrap"
     }
 }
