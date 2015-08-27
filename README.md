@@ -10,9 +10,10 @@ Fix Issues :
 - Edit link base on moduleId/ControllerID
 
 
+
 Custom :
 
-- Ignorance some timespan field for inlislite development like CreateBy,CreateDate,CreateTerminal,UpdateBy,UpdateDate,UpdateTerminal
+- Add Behaviour CreateBy,CreateDate,CreateTerminal,UpdateBy,UpdateDate,UpdateTerminal
 
 
 ## Installation
