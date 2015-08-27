@@ -13,7 +13,7 @@
 		{
             "name": "Andy Kurniawan",
             "email": "dodot.kurniawan@gmail.com"
-        },
+        }
     ],
     "autoload": {
         "psr-4": {
