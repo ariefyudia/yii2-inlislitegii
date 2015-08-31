@@ -45,7 +45,6 @@ $this->params['breadcrumbs'][] = $this->title;
 <?php if ($generator->indexWidgetType === 'grid'): ?>
     <?= "<?php Pjax::begin(); echo " ?>GridView::widget([
         'dataProvider' => $dataProvider,
-        <?= !empty($generator->searchModelClass) ? "'filterModel' => \$searchModel,\n        'columns' => [\n" : "'columns' => [\n"; ?>
 		'toolbar'=> [
             ['content'=>
                  \common\components\PageSize::widget(
@@ -75,6 +74,8 @@ $this->params['breadcrumbs'][] = $this->title;
             '{export}',
         ],
         'filterSelector' => 'select[name="per-page"]',
+        <?= !empty($generator->searchModelClass) ? "'filterModel' => \$searchModel,\n 'columns' => [\n" : "'columns' => [\n"; ?>
+		
             ['class' => 'yii\grid\SerialColumn'],
 
 <?php

@@ -2,7 +2,7 @@
 
 use yii\helpers\Inflector;
 use yii\helpers\StringHelper;
-
+use yii\helpers\Html;
 /**
  * @var yii\web\View $this
  * @var yii\gii\generators\crud\Generator $generator
@@ -13,9 +13,10 @@ $urlParams = $generator->generateUrlParams();
 echo "<?php\n";
 ?>
 
-use yii\helpers\Html;
-use kartik\datecontrol\DateControl;
+
+
 use yii\widgets\DetailView;
+use kartik\datecontrol\DateControl;
 use yii\helpers\Url;
 
 /**
@@ -29,8 +30,8 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="<?= Inflector::camel2id(StringHelper::basename($generator->modelClass)) ?>-view">
    <p> <?= Html::a(Yii::t('app', 'Back'), ['index'], ['class' => 'btn btn-warning']) ?>
-        <?= Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a(Yii::t('app', 'Remove'), ['delete', 'id' => $model->id], [
+        <?= Html::a(Yii::t('app', 'Update'), ['update', 'id' => '$model->id'], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a(Yii::t('app', 'Remove'), ['delete', 'id' => '$model->id'], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => Yii::t('yii','Are you sure you want to delete this item?'),
