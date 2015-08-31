@@ -45,7 +45,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= "<?= " ?>DetailView::widget([
             'model' => $model,
             
-        ],
         'attributes' => [
 <?php
 if (($tableSchema = $generator->getTableSchema()) === false) {
