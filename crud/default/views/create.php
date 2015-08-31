@@ -24,7 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="<?= Inflector::camel2id(StringHelper::basename($generator->modelClass)) ?>-create">
     <div class="page-header">
-        <h1><?= "<?= " ?>Html::encode($this->title) ?></h1>
+        <h3><span class="glyphicon glyphicon-plus-sign"></span> <?=Yii::t('app','Add')?></h3>
     </div>
     <?= "<?= " ?>$this->render('_form', [
         'model' => $model,

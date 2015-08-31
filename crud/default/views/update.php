@@ -27,7 +27,9 @@ $this->params['breadcrumbs'][] = <?= $generator->generateString('Update') ?>;
 ?>
 <div class="<?= Inflector::camel2id(StringHelper::basename($generator->modelClass)) ?>-update">
 
-    <h1><?= "<?= " ?>Html::encode($this->title) ?></h1>
+    <div class="page-header">
+        <h3><span class="glyphicon glyphicon-edit"></span> <?=Yii::t('app','Update')?></h3>
+    </div>
 
     <?= "<?= " ?>$this->render('_form', [
         'model' => $model,

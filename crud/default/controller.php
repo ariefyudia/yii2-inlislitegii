@@ -92,6 +92,7 @@ class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->bas
         $model = $this->findModel(<?= $actionParams ?>);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+			 
         return $this->redirect(['view', 'id' => $model-><?=$generator->getTableSchema()->primaryKey[0]?>]);
         } else {
         return $this->render('view', ['model' => $model]);
@@ -108,6 +109,15 @@ class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->bas
         $model = new <?= $modelClass ?>;
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+			Yii::$app->getSession()->setFlash('success', [
+                    'type' => 'info',
+                    'duration' => 500,
+                    'icon' => 'fa fa-info-circle',
+                    'message' => Yii::t('app','Success Save'),
+                    'title' => 'Info',
+                    'positonY' => Yii::$app->params['flashMessagePositionY'],
+                    'positonX' => Yii::$app->params['flashMessagePositionX']
+                ]);
             return $this->redirect(['view', <?= $urlParams ?>]);
         } else {
             return $this->render('create', [
@@ -127,6 +137,15 @@ class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->bas
         $model = $this->findModel(<?= $actionParams ?>);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+			 Yii::$app->getSession()->setFlash('success', [
+                    'type' => 'info',
+                    'duration' => 500,
+                    'icon' => 'fa fa-info-circle',
+                    'message' => Yii::t('app','Success Edit'),
+                    'title' => 'Info',
+                    'positonY' => Yii::$app->params['flashMessagePositionY'],
+                    'positonX' => Yii::$app->params['flashMessagePositionX']
+                ]);
             return $this->redirect(['view', <?= $urlParams ?>]);
         } else {
             return $this->render('update', [
@@ -144,7 +163,15 @@ class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->bas
     public function actionDelete(<?= $actionParams ?>)
     {
         $this->findModel(<?= $actionParams ?>)->delete();
-
+		Yii::$app->getSession()->setFlash('success', [
+                    'type' => 'info',
+                    'duration' => 500,
+                    'icon' => 'fa fa-info-circle',
+                    'message' => Yii::t('app','Success Delete'),
+                    'title' => 'Info',
+                    'positonY' => Yii::$app->params['flashMessagePositionY'],
+                    'positonX' => Yii::$app->params['flashMessagePositionX']
+                ]);
         return $this->redirect(['index']);
     }
 
