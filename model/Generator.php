@@ -22,14 +22,14 @@ use yii\helpers\Inflector;
 class Generator extends \yii\gii\generators\model\Generator
 {
 	
-	public $createdAt = 'created_at';
-    public $updatedAt = 'updated_at';
+	public $createdAt = 'CreateDate';
+    public $updatedAt = 'UpdateDate';
     public $timestampValue = "new \yii\db\Expression('NOW()')";
-    public $createdBy = 'created_by';
-    public $updatedBy = 'updated_by';
+    public $createdBy = 'CreateBy';
+    public $updatedBy = 'UpdateBy';
     public $blameableValue = '\Yii::$app->user->id';
-	public $createdTerminal = 'created_terminal';
-    public $updatedTerminal = 'updated_terminal';
+	public $createdTerminal = 'CreateTerminal';
+    public $updatedTerminal = 'UpdateTerminal';
     public $terminalValue = '\Yii::$app->request->userIP';
 	
 	
