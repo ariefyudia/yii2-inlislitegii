@@ -110,6 +110,7 @@ if(!empty($enum)){
     public function behaviors()
     {
         return [
+        \nhkey\arh\ActiveRecordHistoryBehavior::className(),
 <?php if($generator->createdAt || $generator->updatedAt):?>
             [
                 'class' => TimestampBehavior::className(),
