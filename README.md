@@ -60,6 +60,9 @@ The preferred way to install this extension is through [composer](http://getcomp
 ## Usage
 
 ```php
+
+php yii migrate --migrationPath=@vendor/nhkey/yii2-activerecord-history/migrations
+
 //if your gii modules configuration looks like below:
 $config['modules']['gii'] = 'yii\gii\Module';
 
