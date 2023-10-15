@@ -22,7 +22,7 @@
     },
     "require": {
         "kartik-v/yii2-widgets": "*",
-        "kartik-v/yii2-grid": "~3.5.1",
+        "kartik-v/yii2-grid": "~3.3.0",
         "kartik-v/yii2-icons": "*",
         "kartik-v/yii2-datecontrol": "*",
         "kartik-v/yii2-helpers": "*",
